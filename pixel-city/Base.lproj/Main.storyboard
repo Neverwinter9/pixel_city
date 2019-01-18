@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MapVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="MapVC" customClass="MapVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pb3-g9-4Bp"/>
+                        <viewControllerLayoutGuide type="bottom" id="KJl-rc-0uY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iy-eM-21m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djw-I4-riv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to drop a pin and view photos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="irK-Qw-Hbo">
+                                        <rect key="frame" x="32" y="24" width="311" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="311" id="Q8J-js-KUS"/>
+                                            <constraint firstAttribute="height" constant="22" id="f2j-5X-sMV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="irK-Qw-Hbo" firstAttribute="centerX" secondItem="Djw-I4-riv" secondAttribute="centerX" id="AYn-en-hdg"/>
+                                    <constraint firstAttribute="height" constant="70" id="Ubj-nN-g35"/>
+                                    <constraint firstItem="irK-Qw-Hbo" firstAttribute="centerY" secondItem="Djw-I4-riv" secondAttribute="centerY" id="Vxt-41-AEh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYa-In-SQQ">
+                                <rect key="frame" x="299" y="587" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Jyd-GJ-7W2"/>
+                                    <constraint firstAttribute="height" constant="60" id="vWH-s7-zZ8"/>
+                                </constraints>
+                                <state key="normal" image="locationButton"/>
+                                <connections>
+                                    <action selector="centerMapBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eSP-fH-Qgt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hQ-cK-QVq">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="hKe-Ju-SjF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DYa-In-SQQ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="03s-oJ-0z1"/>
+                            <constraint firstItem="Djw-I4-riv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7RL-dy-zD0"/>
+                            <constraint firstItem="1hQ-cK-QVq" firstAttribute="top" secondItem="KJl-rc-0uY" secondAttribute="bottom" id="9sO-Bc-aeH"/>
+                            <constraint firstItem="7iy-eM-21m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KTf-5t-Fzt"/>
+                            <constraint firstAttribute="trailing" secondItem="1hQ-cK-QVq" secondAttribute="trailing" id="TAO-UK-Uby"/>
+                            <constraint firstItem="KJl-rc-0uY" firstAttribute="top" secondItem="DYa-In-SQQ" secondAttribute="bottom" constant="20" id="VxX-Vf-HOe"/>
+                            <constraint firstAttribute="trailing" secondItem="Djw-I4-riv" secondAttribute="trailing" id="Xsp-wl-o96"/>
+                            <constraint firstItem="Djw-I4-riv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Yje-Vl-P8v"/>
+                            <constraint firstItem="1hQ-cK-QVq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cCC-3h-cJr"/>
+                            <constraint firstItem="1hQ-cK-QVq" firstAttribute="top" secondItem="7iy-eM-21m" secondAttribute="bottom" id="d5b-le-KMM"/>
+                            <constraint firstItem="7iy-eM-21m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hAo-aj-szW"/>
+                            <constraint firstAttribute="trailing" secondItem="7iy-eM-21m" secondAttribute="trailing" id="u8H-nH-iD9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="7iy-eM-21m" id="bgw-XV-Y9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="locationButton" width="67" height="67"/>
+    </resources>
+</document>
